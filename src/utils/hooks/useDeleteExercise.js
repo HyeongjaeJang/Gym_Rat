@@ -5,6 +5,7 @@ function useDeleteExercise() {
   const [deletedExercise, setDeletedExercise] = useState(null);
   const [error, setError] = useState(null);
   const deleteExercise = async (id, data) => {
+    console.log("data", data);
     try {
       const response = await api.deleteWorkout(id, data);
       setDeletedExercise(response);

@@ -19,7 +19,7 @@ const UpdateForm = () => {
     image: selectedEx.exercise.image,
     user_id: id,
     date: selectedEx.day,
-    exercise_id: selectedEx.exercise.exercise_id,
+    exercise_id: selectedEx.exercise.id,
   });
 
   const handleSubmit = async (e) => {
@@ -46,7 +46,7 @@ const UpdateForm = () => {
   };
   const handleDelete = async () => {
     try {
-      await deleteExercise(id, { id: exercise.exercise_id });
+      await deleteExercise(id, { id: selectedEx.exercise.id });
       navigate(`/home/${id}`);
     } catch (error) {
       console.error("Delete exercise failed", error);
