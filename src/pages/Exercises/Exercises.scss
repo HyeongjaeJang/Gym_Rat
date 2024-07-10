@@ -1,0 +1,56 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+
+.work-container {
+  display: flex;
+  height: 100%;
+  margin-top: 0.6rem;
+  padding: 0 1.5rem;
+
+  .content {
+    flex-grow: 1;
+    .work-main {
+      margin-top: 1.5rem;
+      &__title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        font-weight: 200;
+      }
+      &__cards {
+        display: flex;
+        gap: 0.5rem;
+        Button {
+          color: rgb(82 82 82);
+        }
+        margin-bottom: 1.5rem;
+      }
+      &__sub-title {
+        color: $primary-pupple;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+      }
+    }
+    .exercises__card {
+      display: flex;
+      margin: 0;
+      justify-content: space-between;
+    }
+    .exercises__part-title {
+      color: $primary-pupple;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+    .exercises__img {
+      width: 50px;
+      height: 50px;
+      border-radius: 30%;
+    }
+    .exercise__title {
+      font-size: 0.8rem;
+      width: 100%;
+    }
+    .exercise__desc {
+      justify-self: flex-end;
+    }
+  }
+}

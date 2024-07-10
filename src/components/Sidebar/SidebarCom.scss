@@ -1,0 +1,78 @@
+@use "../../styles/partials/variables" as *;
+
+.sidebar-container {
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -10px;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  align-self: start;
+  margin: 10px 15px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  color: $primary-dark;
+  button {
+    display: flex;
+    gap: 0.6rem;
+  }
+}
+
+.sidebar-logo {
+  height: 30px;
+  margin: 0.5rem;
+}
+
+.custom-sidebar {
+  background: $primary-light;
+  .pro-sidebar-inner {
+    background: $primary-light;
+    height: 100%;
+    transition: none;
+  }
+
+  .ps-menu-root {
+    padding: 0.6rem;
+  }
+
+  .ps-menuitem-root {
+    padding: 0.2rem 0 0.2rem 0.5rem;
+
+    a {
+      padding: 0 !important;
+
+      &:hover {
+        background-color: $secondary-pupple;
+        border-radius: 0.5rem;
+        color: $primary-dark;
+      }
+    }
+  }
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+}
+
+.ps-collapsed {
+  width: 60px !important;
+  min-width: 60px !important;
+}

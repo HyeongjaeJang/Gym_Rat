@@ -1,0 +1,28 @@
+@use "../../styles/partials/variables" as *;
+
+.header {
+  padding-top: 0.7rem;
+  .toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    width: 25px;
+    color: black;
+    &:focus {
+      outline: none;
+    }
+  }
+  display: flex;
+  justify-content: space-between;
+  .header__title {
+    color: $primary-dark;
+    font-size: 1.5rem;
+  }
+}
+.profile-icon {
+  width: 15%;
+  height: 25px;
+  margin-top: 0.3rem;
+}

@@ -1,0 +1,115 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+
+.overlay {
+  @include tablet {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100px;
+    left: 0px;
+    height: 70rem;
+  }
+}
+
+.signUp-form {
+  width: 100%;
+  height: 100%;
+  padding: 3.5rem 1rem 2rem 1rem;
+  box-shadow: 0px 2px 5px 0px #13182c1a;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0;
+  @include tablet {
+    padding: 2rem 5rem;
+    border-radius: 4px;
+    border: 1px solid #13182c1b;
+    width: 85%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include desktop {
+    width: 700px;
+    top: 50%;
+  }
+  .signUp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    &__inputs {
+      width: 100%;
+      margin-top: 1rem;
+    }
+    &__label {
+      font-size: 0.7rem;
+    }
+    .form-input {
+      color: $primary-dark;
+      font-size: 0.8rem;
+      background-color: $primary-light;
+      padding: 0.8rem 3rem;
+      width: 100%;
+      border-radius: 10px;
+      background-repeat: no-repeat;
+      background-position: 3% 50%;
+      background-size: 1rem;
+      margin: 0.5rem 0 1rem 0;
+    }
+    .form-input::placeholder {
+      color: $secondary-pupple;
+    }
+    .input__email,
+    .input__name {
+      background-image: url("/assets/email.svg");
+    }
+    .input__password,
+    .input__confirm-password {
+      background-image: url("/assets/password.svg");
+    }
+
+    &__button {
+      cursor: pointer;
+      width: 100%;
+      height: 3rem;
+      border-radius: 1.25rem;
+      border: 0;
+      transition: all 0.15s ease-in-out;
+      color: white;
+      background: rgb(146, 163, 253);
+      background: linear-gradient(
+        90deg,
+        rgba(146, 163, 253, 1) 0%,
+        rgba(157, 206, 255, 1) 100%
+      );
+      &:hover {
+        background-color: $secondary-blue;
+      }
+      @include tablet {
+        width: 50%;
+      }
+      @include desktop {
+        width: 30%;
+        height: 3rem;
+      }
+    }
+    &__text {
+      font-size: 0.7rem;
+      margin-top: 0.5rem;
+      .span {
+        padding-left: 0.8rem;
+        color: $primary-pupple;
+      }
+    }
+  }
+}
+.fill {
+  border: 1px solid $primary-pupple;
+}
+.empty {
+  border: 1px solid red;
+}

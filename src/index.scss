@@ -1,0 +1,102 @@
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/fonts" as *;
+@use "./styles/partials/mixin" as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: $spacing-0;
+  padding: $spacing-0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color-light: #{$primary-light};
+  --bg-color-dark: #{$primary-dark};
+  --bg-color: var(--bg-color-light);
+  background-color: var(--bg-color);
+}
+
+body {
+  font-family: "Poppins", arial, sans-serif;
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+
+  @include tablet {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  @include desktop {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+
+  @include tablet {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  @include desktop {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+h3 {
+  font-size: 0.813rem;
+  line-height: 1.25rem;
+
+  @include tablet {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+
+  @include desktop {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+h4 {
+  font-size: 0.688rem;
+  line-height: 1rem;
+
+  @include tablet {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+
+  @include desktop {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+p {
+  font-size: 0.938rem;
+  line-height: 1.625rem;
+
+  @include tablet {
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+
+  @include desktop {
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+}

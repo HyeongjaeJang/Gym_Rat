@@ -1,0 +1,54 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+
+.day-container {
+  margin-top: 0.6rem;
+  padding: 0 1.5rem;
+  height: 100vh;
+  &__title {
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 200;
+  }
+  &__exercises {
+    max-height: 30vh;
+    overflow-y: auto;
+  }
+  .exercises__card {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+  }
+  .exercises__img {
+    width: 80px;
+    border-radius: 30%;
+  }
+
+  .exercise__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+  }
+
+  .exercise__title {
+    font-size: 0.6rem;
+  }
+  .exercise__amount {
+    font-size: 0.6rem;
+    font-weight: 200;
+  }
+  .exercise-plus {
+    margin-top: 1.5rem;
+    width: 100%;
+    border: 1px dashed $primary-blue;
+    display: flex;
+    justify-content: center;
+    img {
+      position: relative;
+      top: 0.5rem;
+    }
+  }
+}

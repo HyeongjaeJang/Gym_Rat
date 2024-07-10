@@ -1,0 +1,100 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/fonts" as *;
+
+.home-container {
+  display: flex;
+  margin-top: 0.6rem;
+  height: 100%;
+}
+
+.content {
+  flex-grow: 1;
+
+  .main {
+    padding: 0 1.5rem;
+    margin-top: 1.5rem;
+    .main__title {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 200;
+    }
+    .main__workouts {
+      display: flex;
+      color: $primary-pupple;
+      flex-direction: column;
+      &-title {
+        margin-top: 2rem;
+      }
+      &-day {
+        margin: 1rem 0 0.5rem 0;
+        color: $primary-pink;
+      }
+      .card {
+        width: 20rem;
+        margin-top: 1.5rem;
+        &-body {
+          display: flex;
+          flex-direction: row;
+          padding: 1rem;
+          justify-content: space-between;
+          align-items: center;
+          &__con {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 40%;
+            .work-logo {
+              width: 25px;
+              height: 25px;
+            }
+            .work-name {
+              margin-left: 1rem;
+              color: $primary-dark;
+              font-size: 0.6rem;
+              line-height: 0.7rem;
+            }
+            .work-info {
+              color: $primary-dark;
+              font-size: 0.6rem;
+              line-height: 0.7rem;
+            }
+            .work-arrow {
+              width: 7px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.rbc-header {
+  color: $primary-light;
+}
+
+.rbc-month-view .rbc-header:nth-child(1),
+.rbc-month-view .rbc-header:nth-child(7) {
+  color: $primary-pink;
+}
+
+.rbc-date-cell {
+  color: $primary-light;
+}
+
+.rbc-date-cell:nth-child(1),
+.rbc-date-cell:nth-child(7) {
+  color: $primary-pink;
+  font-weight: bold;
+}
+
+.rbc-off-range {
+  color: lightgray;
+}
+
+.rbc-today {
+  background-color: $secondary-pupple;
+}
+.rbc-now {
+  color: $primary-dark;
+}
